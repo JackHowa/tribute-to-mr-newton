@@ -12,7 +12,9 @@ import {
   Grid,
   Row,
   Well,
-  Panel
+  Panel,
+  ListGroupItem,
+  ListGroup
 } from "react-bootstrap";
 
 // main app for rendering to dom
@@ -36,9 +38,15 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <PageHeader className="primary-green">
-          Mr. Newton <small>The man who trained thousands</small>
-        </PageHeader>
+        <h1>
+          <PageHeader className="primary-green">
+            Mr. Newton{" "}
+            <small>
+              The man who trained thousands during 57 seasons at York High
+              School
+            </small>
+          </PageHeader>
+        </h1>
       </div>
     );
   }
@@ -72,7 +80,14 @@ class Article extends React.Component {
                 It's nice to be great. But it's far greater to be nice.
               </blockquote>
               <blockquote>
-                However fast your are running - run faster!
+                However fast your are running – run faster!
+              </blockquote>
+              <blockquote>
+                <ListGroup>
+                  <ListGroupItem header="Three choices in life:" />
+                  <ListGroupItem>1) Be good</ListGroupItem>
+                  <ListGroupItem>2) Be great</ListGroupItem>
+                </ListGroup>
               </blockquote>
             </Panel.Body>
             <Panel.Footer>
